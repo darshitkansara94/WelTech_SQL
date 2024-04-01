@@ -1,6 +1,7 @@
 -- Joins
 	-- To combine two tables and return as a single result set.
 	-- More use of join is in Select Statement.
+
 	-- Types of Join :
 		-- Inner Join
 			-- Return a matching record from both / multiple tables.
@@ -9,6 +10,11 @@
 				-- Inner join table2 on table1.column = table2.column
 
 			-- Example :
+				Select CM.Category_Id, CM.Category_Name, SCM.SubCategory_Name
+				from tbl_CategoryMaster as CM
+				Inner join tbl_SubCategoryMaster as SCM
+					On CM.Category_Id = SCM.Category_Id
+
 				Select CM.Category_Id, CM.Category_Name, SCM.SubCategory_Name
 				from tbl_CategoryMaster as CM
 				Inner join tbl_SubCategoryMaster as SCM
@@ -67,7 +73,37 @@
 					On  SCM.Category_Id = CM.Category_Id
 
 		-- Cross Join
+			-- Return alll the records from th both table.
+			-- After written cross join, "On" is not applicable. 
+			-- Syntax :
+				-- Select column1, Column2 from table1
+				-- Cross join table2 on table1.column = table2.column
+
+			-- Example :
+				-- Without Filters
+				Select CM.Category_Id, CM.Category_Name, SCM.SubCategory_Name
+				from tbl_SubCategoryMaster as SCM
+				Cross join  tbl_CategoryMaster as CM
+				
+				-- With Filters
+				Select CM.Category_Id, CM.Category_Name, SCM.SubCategory_Name
+				from tbl_SubCategoryMaster as SCM
+				Cross join  tbl_CategoryMaster as CM
+				where CM.Category_Id = 1
 		-- Self Join
+			-- Self join used to get data from same table and join the same table.
+			-- Multiple tables are not involved in this join.
+			-- Syntax :
+				-- Select column1, Column2 from table1 as alisaName1, table1 as alisaName2				
+			-- Example :
+				-- Without Filter
+				Select CM1.Category_Id, CM1.Category_Name, CM2.Category_Id, CM2.Category_Name
+				from tbl_CategoryMaster as CM1, tbl_CategoryMaster as CM2
+
+				-- With Filter
+				Select CM1.Category_Id, CM1.Category_Name, CM2.Category_Id, CM2.Category_Name
+				from tbl_CategoryMaster as CM1, tbl_CategoryMaster as CM2
+				Where CM1.Category_Id = CM2.Category_Id
 
 Select * from tbl_CategoryMaster
 Select * from tbl_SubCategoryMaster
