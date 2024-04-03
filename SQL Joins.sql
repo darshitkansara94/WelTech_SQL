@@ -77,7 +77,7 @@
 			-- After written cross join, "On" is not applicable. 
 			-- Syntax :
 				-- Select column1, Column2 from table1
-				-- Cross join table2 on table1.column = table2.column
+				-- Cross join table2 where table1.column = table2.column
 
 			-- Example :
 				-- Without Filters
@@ -105,5 +105,5 @@
 				from tbl_CategoryMaster as CM1, tbl_CategoryMaster as CM2
 				Where CM1.Category_Id = CM2.Category_Id
 
-Select * from tbl_CategoryMaster
-Select * from tbl_SubCategoryMaster
+	Select * from tbl_CategoryMaster
+	Select * from tbl_SubCategoryMaster
