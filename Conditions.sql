@@ -1,0 +1,47 @@
+-- Conditions :
+	-- To execute particular operation on basis of outcome.
+	-- Condition always return true / false.
+	-- Types of conditions:
+		-- If.. Else
+			-- Only one part is executed from If..Else condition.
+			-- Single condition check.
+			-- We can use nested if..else.
+			-- Syntax :
+				-- Simple If..Else
+					--If condition
+					--Begin
+					--	Execution code
+					--End
+					--Else
+					--Begin
+					--	Execution code
+					--End
+				-- Nested If..Else
+					--If condition
+					--Begin
+					--	Code execution
+
+					--	if condition
+					--	Begin
+					--		Code execution
+					--	End
+					--	Else
+					--	Begin
+					--		Code execution
+					--	End
+					--End
+					--Else
+					--Begin
+					--	Code execution
+
+					--	if condition
+					--	Begin
+					--		Code execution
+					--	End
+					--  Else
+					--	Begin
+					--		Code execution
+					--	End
+					--End
+		-- If.. Else If.. Else
+		-- Switch case		
