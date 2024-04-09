@@ -104,4 +104,26 @@
 				--	Code
 				--End
 
-		-- Switch case		
+		-- Switch case
+			-- Switch case is similar to If..Else If..Else condition.
+			-- Compare to If..Else If..Else condition switch case process the data faster due to 
+				-- we will get result in less time.
+			-- Switch case can be nested.
+			-- We can use multiple conditions as well.
+			-- Syntax :
+				-- Single condition :
+					--CASE
+					--	WHEN condition THEN condition_output
+					--	Else condition_output
+					--End
+				-- Multiple condition :
+					--CASE
+					--	WHEN condition1 THEN condition_output
+					--	WHEN condition2 THEN condition_output
+					--	WHEN condition3 THEN condition_output
+					--	.
+					--	.
+					--	.
+					--	WHEN condition_n THEN condition_output
+					--	Else condition_output					
+					--End
